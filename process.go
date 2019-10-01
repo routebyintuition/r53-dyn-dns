@@ -1,6 +1,10 @@
 package main
 
-import "time"
+import (
+	"fmt"
+	"strings"
+	"time"
+)
 
 // Process is the main function that checks for the existence of the records in Route 53 and updates as necessary
 func (conf *Config) Process(changeDate time.Time) error {
@@ -25,7 +29,30 @@ func (conf *Config) Process(changeDate time.Time) error {
 	}
 
 	if len(recordList) == 1 {
-		Info.Println("Checking record matching IP entry: ", dnsIP)
+		if len(recordList[0].ResourceRecords) != 1 {
+			err := conf.DeleteRecords()
+			if err != nil {
+				Error.Printf("Error in deleting Route53 records...(count %d): %s", len(recordList), err)
+				return err
+			}
+
+			err = conf.ChangeRecord("CREATE", dnsIP.String(), changeDate.String())
+			if err != nil {
+				Error.Println("Error in creating Route 53 entry: ", err)
+				return err
+			}
+			return nil
+		}
+		r53IPString := *recordList[0].ResourceRecords[0].Value
+		dnsIPString := fmt.Sprintf("%s", dnsIP)
+		if !strings.EqualFold(r53IPString, dnsIPString) {
+			Info.Printf("Record IPs not matching, performing update of %s to %s \n", r53IPString, dnsIPString)
+			err := conf.ChangeRecord("UPSERT", dnsIP.String(), changeDate.String())
+			if err != nil {
+				Error.Println("Error in updating record set to new address: ", err)
+				return err
+			}
+		}
 	}
 
 	if len(recordList) > 1 {

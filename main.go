@@ -56,33 +56,25 @@ func main() {
 
 	conf.logInit()
 
-	Info.Println("starting daemon for ", conf.Hostname)
+	Info.Println("Initializing service...")
 
 	err = conf.initAWS()
 
-	ip, err := conf.GetPublicIPService()
+	_, err = conf.GetPublicIPService()
 	if err != nil {
-		fmt.Println("Could not get public IP: ", err)
+		Error.Println("Could not get public IP: ", err)
 		os.Exit(1)
 	}
 
-	output, err := conf.getRecord()
+	_, err = conf.getRecord()
 	if err != nil {
 		fmt.Println("Error: ", err)
 	}
-	fmt.Println(output)
 
-	recordList, err := conf.GetRecords()
+	_, err = conf.GetRecords()
 	if err != nil {
 		Error.Println("Error in Route 53 query: ", err)
 	}
-
-	fmt.Println(recordList)
-	os.Exit(0)
-
-	Info.Println("Current public IP: ", ip)
-	Info.Println("Current DNS configuration: ")
-	PrintIPList(conf)
 
 	ticker := time.NewTicker(time.Duration(conf.Interval) * time.Second)
 
@@ -95,7 +87,7 @@ func main() {
 			Info.Println("Server stopping due to interrupt signal...")
 			return
 		case changeDate := <-ticker.C:
-			Info.Println("Running update at: ", changeDate)
+			Info.Println("Running update... ")
 			conf.Process(changeDate)
 		}
 	}

@@ -81,6 +81,7 @@ func (conf *Config) ChangeRecord(changeType string, address string, changeDate s
 							},
 						},
 						TTL:           aws.Int64(60),
+						Weight:        aws.Int64(1),
 						SetIdentifier: aws.String(fmt.Sprintf("Dynamic DNS record updated on: %s", changeDate)),
 					},
 				},
