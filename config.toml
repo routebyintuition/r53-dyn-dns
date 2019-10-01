@@ -1,0 +1,11 @@
+hostname = "dns.host.name"
+dns_url = "https://api.ipify.org?format=text"
+
+[aws]
+aws_profile = ""
+hosted_zone_id = "XXXXXXXXXX"
+
+[server]
+refresh_interval = 600
+log_directory = "./"
+

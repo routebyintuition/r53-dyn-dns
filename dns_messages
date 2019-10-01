@@ -1,0 +1,71 @@
+INFO: 2019/09/20 16:02:01 starting daemon...
+INFO: 2019/09/20 16:10:41 starting daemon...
+INFO: 2019/09/20 16:40:00 starting daemon...
+INFO: 2019/09/20 16:43:14 starting daemon...
+INFO: 2019/09/20 16:44:21 starting daemon for  lab.dev-null.link
+INFO: 2019/09/20 16:51:57 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 16:51:57 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:00:09 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 17:00:09 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:06:45 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 17:06:45 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:07:26 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 17:07:26 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:09:22 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 17:09:22 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:09:26 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 17:09:26 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:11:33 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 17:11:33 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:12:34 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 17:12:34 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:12:44 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 17:12:44 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:16:27 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 17:16:27 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:16:30 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 17:16:30 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:16:33 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 17:16:33 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:29:27 starting daemon for  lab.dev-null.link
+ERROR: 2019/09/20 17:29:27 IP Error:  lookup lab.dev-null.link: no such host
+INFO: 2019/09/20 17:31:27 starting daemon for  lab.unicorns.direct
+ERROR: 2019/09/20 17:31:27 IP Error:  lookup lab.unicorns.direct: no such host
+INFO: 2019/09/20 17:32:23 starting daemon for  lab.unicorns.direct
+ERROR: 2019/09/20 17:32:23 IP Error:  lookup lab.unicorns.direct: no such host
+INFO: 2019/09/20 17:54:51 starting daemon for  lab.unicorns.direct
+INFO: 2019/09/20 17:54:52 lab.unicorns.direct -> 192.146.154.3
+INFO: 2019/09/20 17:55:30 starting daemon for  lab.unicorns.direct
+INFO: 2019/09/20 17:55:30 lab.unicorns.direct -> 192.146.154.3
+INFO: 2019/09/20 17:58:25 starting daemon for  lab.unicorns.direct
+INFO: 2019/09/20 17:58:25 lab.unicorns.direct -> 192.146.154.3
+INFO: 2019/09/20 18:01:49 starting daemon for  lab.unicorns.direct
+INFO: 2019/09/20 18:01:49 lab.unicorns.direct -> 192.146.154.3
+INFO: 2019/09/20 18:01:50 Current public IP:  ?37362e3132312e382e323239
+INFO: 2019/09/20 18:01:50 Current DNS configuration: 
+INFO: 2019/09/20 18:01:50 lab.unicorns.direct -> 192.146.154.3
+INFO: 2019/09/20 18:01:56 Running update at:  2019-09-20 18:01:56.684303 -0700 PDT m=+6.943793908
+INFO: 2019/09/20 18:02:02 Running update at:  2019-09-20 18:02:02.682718 -0700 PDT m=+12.942200170
+INFO: 2019/09/20 18:02:05 Server stopping due to interrupt signal...
+INFO: 2019/09/20 18:04:05 starting daemon for  lab.unicorns.direct
+INFO: 2019/09/20 18:04:05 lab.unicorns.direct -> 192.146.154.3
+INFO: 2019/09/20 18:04:06 Current public IP:  76.121.8.229
+INFO: 2019/09/20 18:04:06 Current DNS configuration: 
+INFO: 2019/09/20 18:04:06 lab.unicorns.direct -> 192.146.154.3
+INFO: 2019/09/20 18:04:12 Running update at:  2019-09-20 18:04:12.508615 -0700 PDT m=+6.923376435
+INFO: 2019/09/20 18:04:15 Server stopping due to interrupt signal...
+INFO: 2019/09/20 18:06:05 starting daemon for  lab.unicorns.direct
+INFO: 2019/09/20 18:06:05 lab.unicorns.direct -> 192.146.154.3
+INFO: 2019/09/20 18:06:39 starting daemon for  lab.unicorns.direct
+INFO: 2019/09/20 18:06:39 lab.unicorns.direct -> 192.146.154.3
+INFO: 2019/09/20 18:06:39 Current public IP:  76.121.8.229
+INFO: 2019/09/20 18:06:39 Current DNS configuration: 
+INFO: 2019/09/20 18:06:39 lab.unicorns.direct -> 192.146.154.3
+INFO: 2019/09/20 18:06:43 Server stopping due to interrupt signal...
+INFO: 2019/09/24 18:57:35 starting daemon for  lab.unicorns.direct
+INFO: 2019/09/24 18:57:35 Current public IP:  76.121.8.229
+INFO: 2019/09/24 18:57:35 Current DNS configuration: 
+INFO: 2019/09/24 18:57:35 lab.unicorns.direct -> 192.146.154.3
+INFO: 2019/09/24 18:57:41 Running update at:  2019-09-24 18:57:41.983482 -0700 PDT m=+6.741810449
+INFO: 2019/09/24 18:57:47 Running update at:  2019-09-24 18:57:47.982711 -0700 PDT m=+12.741088348
+INFO: 2019/09/24 18:57:49 Server stopping due to interrupt signal...
