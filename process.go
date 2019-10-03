@@ -52,6 +52,8 @@ func (conf *Config) Process(changeDate time.Time) error {
 				Error.Println("Error in updating record set to new address: ", err)
 				return err
 			}
+		} else {
+			Info.Println("Current IP: ", dnsIPString)
 		}
 	}
 

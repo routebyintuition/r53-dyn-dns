@@ -81,6 +81,9 @@ func main() {
 	conf.Done = make(chan os.Signal)
 	signal.Notify(conf.Done, os.Interrupt)
 
+	conf.Process(time.Now())
+	Info.Println("Initialization complete")
+
 	for {
 		select {
 		case <-conf.Done:
