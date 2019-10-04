@@ -11,6 +11,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/route53"
 )
 
+// initAWS initializes the AWS configuration to the default us-east-1 region which is needed for global services
 func (conf *Config) initAWS() error {
 	sess, err := session.NewSession(&aws.Config{
 		Region:      aws.String("us-east-1"),
