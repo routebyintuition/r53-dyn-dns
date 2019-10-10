@@ -16,7 +16,7 @@ After credentials are created, login to an AWS account where you have access to 
 ## Installation
 
 ```
-go get -u github.com/routebyintuition/r53-dyn-dns.git
+go get -u github.com/routebyintuition/r53-dyn-dns
 ```
 
 ## Configuration
