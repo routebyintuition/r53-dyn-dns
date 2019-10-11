@@ -1,0 +1,21 @@
+# Dynamic DNS using Amazon Route 53 SystemD service definition
+[Unit]
+Description=Dynamic DNS using Amazon Route 53
+Documentation=https://github.com/routebyintuition/r53-dyn-dns
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=nodoby
+Group=nodoby
+ExecStart=/usr/local/bin/r53-dyn-dns -config /etc/r53-dyn-dns/config.toml
+
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGINT
+TimeoutStopSec=5
+Restart=on-failure
+SyslogIdentifier=r53-dyn-dns
+
+[Install]
+WantedBy=multi-user.target

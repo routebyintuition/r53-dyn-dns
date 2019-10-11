@@ -32,7 +32,7 @@ hosted_zone_id = "XXXXXXXXXX"
 
 [server]
 refresh_interval = 600
-log_directory = "./"
+log_directory = "/tmp/"
 ```
 
 **hostname:** Set a hostname matching your Amazon Route 53 hosted zone. If I owned a hosted zone named, "home.name", this would work.
@@ -57,3 +57,48 @@ Otherwise, you must pass the configuration file name to the binary:
 /path/to/r53-dyn-dns -config /another/path/file.toml
 ```
 
+## Startup
+To configure this application to automatically start after reboot, it can be added to the systemd boot process. Follow the instructions below.
+
+```
+sudo cp ~/go/bin/r53-dyn-dns /usr/local/bin/
+sudo mkdir /etc/r53-dyn-dns
+sudo mkdir /var/log/r53-dyn-dns
+sudo chown nobody:nobody /var/log/r53-dyn-dns
+sudo chmod 664 /var/log/r53-dyn-dns
+sudo vim /etc/systemd/system/r53-dyn-dns.service
+```
+
+Paste in the information below (replacing USERNAME and GROUPNAME with a username and group where you have configured the AWS credentials):
+
+```
+# Dynamic DNS using Amazon Route 53 SystemD service definition
+[Unit]
+Description=Dynamic DNS using Amazon Route 53
+Documentation=https://github.com/routebyintuition/r53-dyn-dns
+Requires=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=<USERNAME>
+Group=<GROUPNAME>
+ExecStart=/usr/local/bin/r53-dyn-dns -config /etc/r53-dyn-dns/config.toml
+
+ExecReload=/bin/kill -HUP $MAINPID
+KillSignal=SIGINT
+TimeoutStopSec=5
+Restart=on-failure
+SyslogIdentifier=r53-dyn-dns
+
+[Install]
+WantedBy=multi-user.target
+```
+
+You will now need to create a configuration file in /etc/r53-dyn-dns or copy an existing configuration file there.
+
+```
+sudo systemctl enable r53-dyn-dns
+sudo systemctl start r53-dyn-dns
+sudo systemctl status r53-dyn-dns
+```

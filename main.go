@@ -81,7 +81,12 @@ func main() {
 	conf.Done = make(chan os.Signal)
 	signal.Notify(conf.Done, os.Interrupt)
 
-	conf.Process(time.Now())
+	err = conf.Process(time.Now())
+	if err != nil {
+		Error.Println("Error during startup: ", err)
+		os.Exit(1)
+	}
+
 	Info.Println("Initialization complete")
 
 	for {
