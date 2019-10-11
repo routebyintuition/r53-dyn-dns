@@ -7,8 +7,8 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-User=nodoby
-Group=nodoby
+User=<USERNAME>
+Group=<GROUPNAME>
 ExecStart=/usr/local/bin/r53-dyn-dns -config /etc/r53-dyn-dns/config.toml
 
 ExecReload=/bin/kill -HUP $MAINPID
